@@ -16,22 +16,22 @@ const Vege = () => {
     const [veggie, setVeggie] = useState<Recipe[]>([]);
 
     useEffect(() => {
+        const getVege = () => {
+            const check = localStorage.getItem('veggie');
+    
+            if (check) {
+                setVeggie(JSON.parse(check));
+            } else {
+                axios.get(`random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&tags=vegetarian`)
+                .then(res => {
+                    setVeggie(res.data.recipes);
+                    localStorage.setItem("veggie", JSON.stringify(res.data.recipes));
+                })
+            }
+        }
+
         getVege();
     }, []);
-
-    const getVege = () => {
-        const check = localStorage.getItem('veggie');
-
-        if (check) {
-            setVeggie(JSON.parse(check));
-        } else {
-            axios.get(`random?apiKey=${process.env.REACT_APP_API_KEY}&number=10&tags=vegetarian`)
-            .then(res => {
-                setVeggie(res.data.recipes);
-                localStorage.setItem("veggie", JSON.stringify(res.data.recipes));
-            })
-        }
-    }
 
     return (
         <div className='wrapper'>
