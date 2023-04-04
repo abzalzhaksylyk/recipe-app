@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const CardBlock = styled.div`
     min-height: 18rem;
@@ -41,4 +42,11 @@ export const Gradient = styled.div`
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5))
+`;
+
+export const CardLink = styled(Link)`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
 `;

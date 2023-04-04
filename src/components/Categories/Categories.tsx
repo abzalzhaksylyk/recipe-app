@@ -9,7 +9,7 @@ import { RecipeIcons, Span } from './Categories.styles'
 const Category = () => {
     const checkStyle = (isActive: boolean): CSSProperties => {
         return {
-            background: isActive? "linear-gradient(to right, #f27121, #e94057)" : '',
+            backgroundImage: isActive? "linear-gradient(to right, #f27121, #e94057)" : '',
             width: "60px",
             height: "60px",
             fontSize: "20px",
