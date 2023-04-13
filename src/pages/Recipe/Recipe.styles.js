@@ -4,11 +4,6 @@ export const UlList = styled.ul`
     margin-top: 2rem;
 `;
 
-export const LiList = styled.li`
-    font-size: 1.2rem;
-    list-style: 2.5rem;
-`;
-
 export const ImageBlock = styled.img`
     width: 450px;
     margin-top: 1.2rem;

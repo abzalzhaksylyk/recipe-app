@@ -5,24 +5,24 @@ import axios from '../../axios-url';
 
 import { motion } from 'framer-motion';
 
-import { ImageBlock, DetailsBlock, UlList, LiList, InfoBlock } from './Recipe.styles';
+import { ImageBlock, DetailsBlock, UlList, InfoBlock } from './Recipe.styles';
 
 interface RecipeDetails {
-    title: string,
-    image: string,
-    summary: string,
-    instructions: string,
-    extendedIngredients: Array<{ id: number, original: string }>
+  title: string,
+  image: string,
+  summary: string,
+  instructions: string,
+  extendedIngredients: Array<{ id: number, original: string }>
 }
 
 const Recipe = () => {
-    const [details, setDetails] = useState<RecipeDetails>({
-        title: "",
-        image: "",
-        summary: "",
-        instructions: "",
-        extendedIngredients: []
-    });
+  const [details, setDetails] = useState<RecipeDetails>({
+    title: "",
+    image: "",
+    summary: "",
+    instructions: "",
+    extendedIngredients: []
+  });
   const [activeTab, setActiveTab] = useState('instructions');
   const params = useParams();
 

@@ -2,14 +2,14 @@ import React from 'react';
 import { CardBlock, Gradient, RecipeImage, RecipeTitle, CardLink } from './Card.styles';
 
 
-interface CardInterface {
+interface CardProps {
     recipeTitle?: string
     recipeImage?: string,
     linkTo: string
 }
 
 
-const Card: React.FC<CardInterface> = ({ recipeTitle, recipeImage, linkTo }) => {
+const Card: React.FC<CardProps> = ({ recipeTitle, recipeImage, linkTo }) => {
   return (
     <CardBlock>
         <RecipeTitle>{ recipeTitle }</RecipeTitle>

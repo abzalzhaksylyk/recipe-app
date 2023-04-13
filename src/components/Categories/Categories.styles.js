@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { NavLink } from 'react-router-dom';
+
 export const RecipeIcons = styled.div`
     width: 40%;
     margin: 20px auto 0;

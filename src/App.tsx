@@ -3,7 +3,7 @@ import React from 'react';
 import SearchRecipe from './components/SearcheRecipe/SearchRecipe';
 import Categories from './components/Categories/Categories';
 
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Pages from './pages/Pages';
 
 const styleForLogo = {
