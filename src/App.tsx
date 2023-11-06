@@ -4,6 +4,9 @@ import './index.css';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Pages from './pages/Pages';
 
+import SearchRecipe from './components/SearchRecipe/SearchRecipe';
+import Categories from './components/Categories/Categories';
+
 const styleForLogo = {
   textDecoration: 'none',
   fontSize: '1.2rem',
@@ -24,8 +27,8 @@ function App() {
         <div style={styleforDiv}>
           <Link to={'/'} style={styleForLogo}>Home</Link>
         </div>
-        {/* <SearchRecipe/>
-        <Categories/> */}
+        <SearchRecipe/>
+        <Categories/>
         <Pages/>
       </Router>
     </div>
